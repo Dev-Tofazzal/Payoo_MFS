@@ -7,6 +7,23 @@ document.getElementById("btn_add_money")
         
         const pinNumber = document.getElementById("input_pin_number").value;
         console.log(addMoney,pinNumber);
+
+        if(pinNumber === "1234"){
+            const balance = document.getElementById("balance").innerText;
+            const addMoneyNumber = parseFloat(addMoney)
+            const balanceNumber = parseFloat(balance)
+            
+            
+            const newBalance = addMoneyNumber + balanceNumber;
+            console.log(newBalance);
+            
+            document.getElementById("balance").innerText = newBalance
+            
+            
+        }
+        else{
+            alert("please try again")
+        }
         
         
         // console.log("add money button");
