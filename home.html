@@ -2,62 +2,94 @@
 <html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-    <main class="flex justify-center ">
-        <div class="mockup-phone ">
-            <div class="camera"></div>
-            <div class="display ">
-                <div class="artboard artboard-demo phone-3 ">
-                    <!-- available balance -->
+  <main class="flex justify-center ">
+    <div class="mockup-phone ">
+      <div class="camera"></div>
+      <div class="display ">
+        <div class="artboard artboard-demo phone-3 ">
+          <!-- available balance -->
 
-                    <div class="stats ">
-                        <div class="stat">
-                            <div id="balance" class="stat-value">89400</div>
-                            <div class="stat-desc">Available balance</div>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <!-- user action button  -->
-                    <div>
-                        <button class="btn btn-lg">Add Money</button>  
-                        <button class="btn btn-lg">Cash Out</button>  
-                    </div>
-
-                    <div class="divider"></div>
-
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Amount</span>
-                            </label>
-                            <input id="input_add_money" type="text" placeholder="Enter Your Amount" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">PIN</span>
-                            </label>
-                            <input id="input_pin_number" type="password" placeholder="PIN Number" class="input input-bordered" required />
-                           
-                          </div>
-                          <div class="form-control mt-6">
-                            <button id="btn_add_money" class="btn btn-primary">Add Money</button>
-                          </div>
-                        </form>
-                      </div>
-                </div>
+          <div class="stats ">
+            <div class="stat">
+              <div id="balance" class="stat-value">89400</div>
+              <div class="stat-desc">Available balance</div>
             </div>
+          </div>
+          <div class="divider"></div>
+          <!-- user action button  -->
+          <div>
+            <button id="show_addMoney" class="btn btn-lg">Add Money</button>
+            <button id="show_cashOut" class="btn btn-lg">Cash Out</button>
+          </div>
+
+          <div class="divider"></div>
+          <!-- CashIn Balance part start here -->
+
+          <div id="add_money_form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="input_add_money" type="text" placeholder="Enter Your Amount" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">PIN</span>
+                </label>
+                <input id="input_pin_number" type="password" placeholder="PIN Number" class="input input-bordered"
+                  required />
+
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn_add_money" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- CashIn Balance part end here -->
+
+          <!-- CashOut Balance part start here -->
+          <div id="cash_out_form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="cashOut_money" type="text" placeholder="Enter Your Amount" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">PIN</span>
+                </label>
+                <input id="cashOut_pin_number" type="password" placeholder="PIN Number" class="input input-bordered"
+                  required />
+
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash_out_btn" class="btn btn-primary">Cash Out</button>
+              </div>
+            </form>
+          </div>
+          <!-- CashOut Balance part end here -->
         </div>
-        <script src="js/home.js"></script>
-    </main>
+      </div>
+    </div>
+    <script src="js/addMoney.js"></script>
+    <script src="js/cashOut.js"></script>
+    <script src="js/feature.js"></script>
+  </main>
 
 </body>
 
