@@ -14,7 +14,7 @@ document.getElementById("btn_login").addEventListener("click",
         
         if(phoneNumber=== "01302497001" && pinNumber=== "1234"){
             console.log("You are logged in");
-            window.location.href= "./home.html";
+            window.location.href= "...//home.html";
         }
         else{
             alert("Wrong phone number or pin")
